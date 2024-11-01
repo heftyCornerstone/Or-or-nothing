@@ -4,9 +4,9 @@ const validityCheck = (isCountryStr, isMedalInvalid) => {
     if (!isCountryStr || isMedalInvalid) {
         const countryInvalid = (!isCountryStr) ? '\n국가란에는 숫자를 입력할 수 없습니다' : '';
         const medalInvalid = (isMedalInvalid) ? '\n메달란에는 양의 정수와 0만 입력할 수 있습니다' : '';
-        const aleartMessage = `올바른 값을 입력해주세요!${countryInvalid}${medalInvalid}`;
+        const alertMessage = `올바른 값을 입력해주세요!${countryInvalid}${medalInvalid}`;
         
-        alert(aleartMessage);
+        alert(alertMessage);
         return false
     }
     return true
