@@ -48,7 +48,7 @@
 <br><br>
 
 ## 레이아웃
-<img src='https://github.com/user-attachments/assets/0078275f-0a7d-455d-b460-31a8908a759b' width='60%'>
+<img src='https://github.com/user-attachments/assets/0078275f-0a7d-455d-b460-31a8908a759b' width='70%'>
 
 <br><br>
 
@@ -62,6 +62,12 @@
 
 
 ## 특이사항
-새로운 메달 기록 추가시 정렬 드롭다운 메뉴에서 설정한 순서에 맞게 메달 기록 표에 기입됩니다.
+
+1. 국가란에는 글자만 입력할 수 있으며, 메달란에는 양의 정수와 0만 입력할 수 있습니다. 다른 값이 들어올 시 alert합니다.
+
+<br>
+
+2. 새로운 메달 기록 추가시 정렬 드롭다운 메뉴에서 설정한 순서에 맞게 메달 기록 표에 기입됩니다.
 
 <img src='https://github.com/user-attachments/assets/b3fef935-129c-4ab5-81a9-d8cc51c3b8c2' width='60%'>
+
