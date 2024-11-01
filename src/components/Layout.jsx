@@ -1,3 +1,4 @@
+import titleLogo from "../assets/titleLogo.png"
 const Layout = ({ children }) => {
     const mainStyle = {
         display: 'flex',
@@ -12,18 +13,17 @@ const Layout = ({ children }) => {
         backgroundColor: '#ffffff',
     }
     const titleStyle = {
-        marginTop: '20px',
+        marginTop: '30px',
         marginBottom: '50px'
     }
-    const titleH1Style = {
+    const titleDivStyle = {
         fontSize: '50px',
         textAlign: 'center',
         marginBottom: '10px'
     }
-    const annotationStyle = {
-        fontSize: '14px',
-        color:'#d19e02',
-        textAlign: 'center',
+    const logoStyle = {
+        margin: 'auto',
+        width: '65%'
     }
     const commentStyle = {
         margin: '20px 0 20px 0',
@@ -34,9 +34,8 @@ const Layout = ({ children }) => {
     return (
         <main style={mainStyle}>
             <div style={titleStyle}>
-                <h1 style={titleH1Style}>Or or Nothing!</h1>
-                <div style={annotationStyle}>Or는 프랑스어로 금이라는 뜻이에요</div>
-                <div style={commentStyle}>2024 파리 올림픽에서 딴 메달을 기록해보세요</div>
+                <div style={titleDivStyle}> <img src={titleLogo} alt="no logo" style={logoStyle}/> </div>
+                <div style={commentStyle}>2024 파리 올림픽에서 딴 메달을 기록해보세요!</div>
             </div>
             {children}
         </main>

@@ -56,6 +56,7 @@ const TableBody = ({ medalsStateHook }) => {
 
         return (
             <tr
+                className="record-row"
                 key={`${curRowData.country}Row`}
                 data-country={`${curRowData.country}`}
                 style={recordTableRowStyle}
