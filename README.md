@@ -48,7 +48,9 @@
 <br><br>
 
 ## 레이아웃
+<p align='center'>
 <img src='https://github.com/user-attachments/assets/0078275f-0a7d-455d-b460-31a8908a759b' width='70%'>
+</p>
 
 <br><br>
 
@@ -69,5 +71,6 @@
 
 2. 새로운 메달 기록 추가시 정렬 드롭다운 메뉴에서 설정한 순서에 맞게 메달 기록 표에 기입됩니다.
 
+<p align='center'>
 <img src='https://github.com/user-attachments/assets/b3fef935-129c-4ab5-81a9-d8cc51c3b8c2' width='60%'>
-
+</p>
