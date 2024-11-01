@@ -51,8 +51,9 @@
 
 <img src='https://github.com/user-attachments/assets/8ba46a54-2ae2-4780-a285-40395e3db96b' width='60%'>
 
-<br>
+<br><br>
 
+>
 * 제목
 * 메달 기록 표를 정렬할 수 있는 드롭다운 메뉴
 * 메달 기록 입력란
