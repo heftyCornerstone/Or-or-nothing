@@ -15,7 +15,7 @@ const InputRecordData = ({ inputConfig }) => {
         height: '25px',
         border: 'none',
         borderRadius: '5px',
-        outline: '2px solid #f5b642'//이거 클릭 되었을때만 강조되어야 하는데
+        outline: '2px solid #f5b642',
     }
 
     const { inputType, itemName, labelName } = inputConfig;
