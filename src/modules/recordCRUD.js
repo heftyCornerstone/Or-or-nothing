@@ -1,6 +1,6 @@
 import descendingSorter from "./recordSorter";
 
-const setData = (newObtainedMedals, setState)=>{
+const setData = (newObtainedMedals, setState) => {
     const newData = JSON.stringify(newObtainedMedals);
 
     setState(newObtainedMedals);
@@ -17,7 +17,7 @@ const dataHandlerConfig = (e, state) => {
         'gold': parseInt(gold.value),
         'silver': parseInt(silver.value),
         'bronze': parseInt(bronze.value),
-        'overall' : ( parseInt(gold.value) + parseInt(silver.value) + parseInt(bronze.value) ),
+        'overall': (parseInt(gold.value) + parseInt(silver.value) + parseInt(bronze.value)),
     }
 
     return { 'isIncluded': isIncluded, 'newMedalData': newMedalData };
@@ -51,7 +51,7 @@ const updateObtainedMedals = (e, useStateHook, orderingOption) => {
     const filteredData = state.filter((curData) => (curData.country !== country));
     const newObtainedMedals = [...filteredData, newMedalData];
     const sortedData = descendingSorter(orderingOption, newObtainedMedals);
-    
+
     setData(sortedData, setState);
 }
 
@@ -59,7 +59,7 @@ const deleteObtainedMedals = (e, useStateHook) => {
     const [state, setState] = useStateHook;
     const country = e.target.closest('.record-row').dataset.country;
 
-    if(confirm(`정말 ${country}의 메달 기록을 삭제하시겠습니까?`)) {
+    if (confirm(`정말 ${country}의 메달 기록을 삭제하시겠습니까?`)) {
 
         const filteredData = state.filter((curData) => (curData.country !== country));
         const newObtainedMedals = [...filteredData];
@@ -68,4 +68,4 @@ const deleteObtainedMedals = (e, useStateHook) => {
     }
 }
 
-export {addObtainedMedals, updateObtainedMedals, deleteObtainedMedals}
+export { addObtainedMedals, updateObtainedMedals, deleteObtainedMedals }

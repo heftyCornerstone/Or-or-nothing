@@ -34,50 +34,46 @@ const InputRecordData = ({ inputConfig }) => {
     )
 }
 
-const InputCountry = () => {
-    const config = {
-        inputType: 'text',
-        itemName: 'country',
-        labelName: '국가',
-    }
-
-    return (
-        <InputRecordData inputConfig={config} key={`${config.itemName}Input`}/>
-    )
-}
-
-const InputMedals = () => {
-    const medals = [
+const InputBars = () => {
+    const inputBars = [
         {
-            'medalType': 'gold',
-            'medalName': '금메달',
+            'inputType': 'text',
+            'itemName': 'country',
+            'labelName': '국가',
         },
         {
-            'medalType': 'silver',
-            'medalName': '은메달',
+            'inputType': 'number',
+            'itemName': 'gold',
+            'labelName': '금메달',
         },
         {
-            'medalType': 'bronze',
-            'medalName': '동메달',
+            'inputType': 'number',
+            'itemName': 'silver',
+            'labelName': '은메달',
+        },
+        {
+            'inputType': 'number',
+            'itemName': 'bronze',
+            'labelName': '동메달',
         },
     ];
 
-    const InputMedalsList = medals.map((medal) => {
+    const InputBarsList = inputBars.map((medal) => {
         const config = {
-            inputType: 'number',
-            itemName: medal.medalType,
-            labelName: medal.medalName,
+            inputType: medal.inputType,
+            itemName: medal.itemName,
+            labelName: medal.labelName,
         }
 
-        return <InputRecordData inputConfig={config} key={`${config.itemName}Input`}/>;
+        return <InputRecordData inputConfig={config} key={`${config.itemName}Input`} />;
     });
 
 
     return (
         <>
-            {InputMedalsList}
+            {InputBarsList}
         </>
     )
 }
 
-export { InputCountry, InputMedals }
+export { InputBars }
