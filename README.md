@@ -49,7 +49,7 @@
 
 ## 레이아웃
 
-<img src='https://github.com/user-attachments/assets/8ba46a54-2ae2-4780-a285-40395e3db96b', width='60%'>
+<img src='https://github.com/user-attachments/assets/8ba46a54-2ae2-4780-a285-40395e3db96b' width='60%'>
 
 <br>
 
@@ -64,4 +64,4 @@
 ## 특이사항
 새로운 메달 기록 추가시 정렬 드롭다운 메뉴에서 설정한 순서에 맞게 메달 기록 표에 기입됩니다.
 
-<img src='https://github.com/user-attachments/assets/b3fef935-129c-4ab5-81a9-d8cc51c3b8c2', width='60%'>
+<img src='https://github.com/user-attachments/assets/b3fef935-129c-4ab5-81a9-d8cc51c3b8c2' width='60%'>
