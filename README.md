@@ -74,3 +74,76 @@
 <p align='center'>
 <img src='https://github.com/user-attachments/assets/b3fef935-129c-4ab5-81a9-d8cc51c3b8c2' width='60%'>
 </p>
+
+<br><br>
+
+## 제출 이후 정정된 사항
+
+<span style='color:#bf1f13'>
+다시 요구사항을 읽어보니 <span style='font-weight:bold'>분리한 컴포넌트에 대해 README 파일에 설명을 추가</span>하지 않았습니다!<br>
+비록 제출 시간이 지났지만 읽는 이의 편의를 위해서 내용을 추가합니다.
+</span>
+
+<br>
+
+**컴포넌트 목록**
+>
+* Layout
+* RecordOderingMenu
+* RegisterRecord
+* InputBars
+* RecordTable
+* SubmitButton
+
+<br>
+
+>
+**모듈 목록**
+* recordCRUD
+* recordSorter
+
+
+<br>
+
+### 컴포넌트
+
+#### Layout
+웹페이지 레이아웃입니다. 웹페이지의 컨텐츠를 children으로 받습니다.
+<br>
+
+#### RecordOderingMenu
+메달 집계 표 정렬 드롭다운 메뉴를 생성합니다.
+<br>
+
+#### RegisterRecord
+메달 집계 데이터 입력란을 생성합니다.
+recordCRUD 모듈을 이용하고 있습니다.
+<br>
+
+#### InputBars
+입력란에 사용될 인풋 바를 생성합니다.
+<br>
+
+#### RecordTable
+메달 집계 표를 생성합니다.
+표 컴포넌트는 테이블 헤드와 테이블 바디 컴포넌트로 구성되어 있습니다.
+테이블 바디 컴포넌트는 내부에서 표의 열을 생성하는 컴포넌트를 이용하고 있습니다.
+<br>
+
+#### SubmitButton
+버튼을 생성하는 컴포넌트입니다. 스타일링을 일관적으로 하기 위해서 만들었습니다.
+기본적인 스타일이 적용되어 있으며, props로 style을 받아 기본 스타일에 추가하여 다양한 버튼을 생성할 수 있습니다.
+
+<br><br>
+
+### 모듈
+
+#### recordCRUD
+메달 집계 데이터를 생성, 업데이트, 삭제하는 데 사용하는 함수들이 들어있습니다.
+R에 해당하는 함수는 없지만, 파일명을 간결하게 유지하면서도 어떤 기능을 하는지 편히 알아볼 수 있게끔 CRUD를 이름에 사용하였습니다.
+<br>
+
+#### recordSorter
+집계된 데이터를 정렬하는 함수인 descendingSorter를 export합니다. 해당 함수는 parameter로 받은 옵션에 따라 데이터를 내림차순으로 정렬합니다.
+비록 하나밖에 없는 정렬 로직이지만, 나중에 다시 코드를 보았을 때 데이터를 어떤 순서로 정리하는지 헷갈리지 않도록 'descend'라는 단어를 함수명에 넣어두었습니다.
+<br>
