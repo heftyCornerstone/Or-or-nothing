@@ -48,8 +48,7 @@
 <br><br>
 
 ## 레이아웃
-
-<img src='https://github.com/user-attachments/assets/8ba46a54-2ae2-4780-a285-40395e3db96b' width='60%'>
+<img src='https://github.com/user-attachments/assets/0078275f-0a7d-455d-b460-31a8908a759b' width='60%'>
 
 <br><br>
 
