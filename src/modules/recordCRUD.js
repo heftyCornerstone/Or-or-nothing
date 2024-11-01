@@ -9,6 +9,7 @@ const validityCheck = (isCountryStr, isMedalInvalid) => {
         alert(aleartMessage);
         return false
     }
+    return true
 }
 
 const setData = (newObtainedMedals, setState) => {
