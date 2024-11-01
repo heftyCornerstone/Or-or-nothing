@@ -1,5 +1,16 @@
 import descendingSorter from "./recordSorter";
 
+const validityCheck = (isCountryStr, isMedalInvalid) => {
+    if (!isCountryStr || isMedalInvalid) {
+        const countryInvalid = (!isCountryStr) ? '\n국가란에는 숫자를 입력할 수 없습니다' : '';
+        const medalInvalid = (isMedalInvalid) ? '\n메달란에는 양의 정수와 0만 입력할 수 있습니다' : '';
+        const aleartMessage = `올바른 값을 입력해주세요!${countryInvalid}${medalInvalid}`;
+        
+        alert(aleartMessage);
+        return false
+    }
+}
+
 const setData = (newObtainedMedals, setState) => {
     const newData = JSON.stringify(newObtainedMedals);
 
@@ -10,23 +21,38 @@ const setData = (newObtainedMedals, setState) => {
 const dataHandlerConfig = (e, state) => {
     const medalData = e.target;
     const { country, gold, silver, bronze } = medalData;
-    const countries = state.map((curData) => curData.country);
-    const isIncluded = countries.includes(country.value);
-    const newMedalData = {
-        'country': country.value,
+    const medals = {
         'gold': parseInt(gold.value),
         'silver': parseInt(silver.value),
         'bronze': parseInt(bronze.value),
         'overall': (parseInt(gold.value) + parseInt(silver.value) + parseInt(bronze.value)),
     }
+    const medalsValues = Object.values(medals);
+    const countries = state.map((curData) => curData.country);
+    const isIncluded = countries.includes(country.value);
+    const isCountryStr = /[^0-9]+$/.test(country.value);
+    const isMedalInvalid = medalsValues.some( (medalValue)=>{
+        return (Number.isInteger(medalValue) && medalValue>=0) ? false : true
+    } );
+    const newMedalData = {
+        'country': country.value,
+        ...medals
+    }
 
-    return { 'isIncluded': isIncluded, 'newMedalData': newMedalData };
+    return { 
+        'isIncluded': isIncluded, 
+        'newMedalData': newMedalData,
+        'isCountryStr': isCountryStr,
+        'isMedalInvalid': isMedalInvalid,
+    };
 }
 
 const addObtainedMedals = (e, useStateHook, orderingOption) => {
     const [state, setState] = useStateHook;
-    const { isIncluded, newMedalData } = dataHandlerConfig(e, state);
-
+    const { isIncluded, newMedalData, isCountryStr, isMedalInvalid } = dataHandlerConfig(e, state);
+    
+    if(!validityCheck(isCountryStr, isMedalInvalid)) return;
+    
     if (isIncluded) {
         alert('이미 등록된 국가입니다');
         return;
@@ -41,8 +67,10 @@ const addObtainedMedals = (e, useStateHook, orderingOption) => {
 const updateObtainedMedals = (e, useStateHook, orderingOption) => {
     const [state, setState] = useStateHook;
     const country = e.target.country.value;
-    const { isIncluded, newMedalData } = dataHandlerConfig(e, state);
-
+    const { isIncluded, newMedalData, isCountryStr, isMedalInvalid  } = dataHandlerConfig(e, state);
+    
+    if(!validityCheck(isCountryStr, isMedalInvalid)) return;
+    
     if (!isIncluded) {
         alert('입력하신 국가를 표에서 찾을 수 없습니다');
         return;

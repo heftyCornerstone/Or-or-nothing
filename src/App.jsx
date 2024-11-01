@@ -24,10 +24,3 @@ function App() {
 }
 
 export default App
-
-
-/*
-할 일
-
-리드미 작성하기
-*/
